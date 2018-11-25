@@ -122,7 +122,7 @@ try:
            datapoints=get_data_points()
            bResult=client.write_points(datapoints)
            print("Write points {0} Bresult:{1}".format(datapoints,bResult))
-        datapoints2=get_data_points()
+        datapoints2=get_os_points()
         bResult=client.write_points(datapoints)
         print("Write points {0} Bresult:{1}".format(datapoints2, bResult))
 
