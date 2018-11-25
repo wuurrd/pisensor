@@ -21,7 +21,7 @@ password = "root"
 
 # Sample period (s).
 # How frequently we will write sensor data from SenseHat to the database.
-sampling_period = 15
+sampling_period = 60
 
 def get_args():
     '''This function parses and returns arguments passed in'''
