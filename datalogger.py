@@ -86,7 +86,7 @@ def get_os_points():
     disk = (diskspace.f_bavail * diskspace.f_frsize) / 1024
     # Create Influxdb datapoints (using lineprotocol as of Influxdb >1.1)
     print ("{} {} CPU: {} Disk: {:.2f}G" .format(
-        session, runNo, load1, disk/1024/1024/1024.))
+        session, runNo, load1, disk/1024./1024./1024.))
 
     datapoints = [
         {
