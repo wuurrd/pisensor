@@ -81,13 +81,12 @@ def get_os_points():
     # Get the three measurement values from the SenseHat sensors
     # Get a local timestamp
     timestamp=datetime.datetime.utcnow().isoformat()
-    round(pressure,3),round(humidity,1)))
     load1, load5, load15 = os.getloadavg()
     diskspace = os.statvfs('/')
     disk = (diskspace.f_bavail * diskspace.f_frsize) / 1024
     # Create Influxdb datapoints (using lineprotocol as of Influxdb >1.1)
     print ("{0} {1} CPU: {2} Memory: {3}" .format(
-        session, runNo, load1, disk/1024/1024)
+        session, runNo, load1, disk/1024/1024))
 
     datapoints = [
         {
